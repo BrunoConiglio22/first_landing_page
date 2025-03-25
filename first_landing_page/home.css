@@ -1,0 +1,627 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.H2{
+  font-size: 36px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.H3{
+  font-size: 18px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.testo{
+  font-size: 14px;
+  font-family: 'Noto Serif', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.H1{
+  font-size: 56px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.white {
+  color: white;
+}
+
+.gold{
+  color: #755803;
+}
+
+.black{
+  color: black;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVIGAZIONE */
+
+.navigation {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* CONTAINER CENTRALE */
+.nav-container {
+  max-width: 1140px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* SEZIONE DI SINISTRA */
+.nav-left {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.nav-logo {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0; /* NON si deve ridurre */
+}
+
+/* MENU DI NAVIGAZIONE */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  color: white;
+  font-size: 12px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;text-decoration: none;
+  flex-shrink: 0; /* I link NON devono ridursi troppo */
+}
+
+/* SEZIONE A DESTRA */
+.nav-button {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+/* BOTTONE */
+.nav-button button {
+  background-color: #202020;
+  color: #EFB50D;
+  font-size: 14px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 0 10px; /* Riduciamo lo spazio laterale */
+  }
+
+  .nav-left {
+    width: 70%; /* Il menu prende più spazio */
+  }
+
+  .nav-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    gap: 15px; /* Diminuisce la distanza tra i link */
+  }
+
+  .nav-link {
+    font-size: 10px; /* Riduciamo la dimensione del testo */
+  }
+
+  .nav-button button {
+    padding: 8px 16px; /* Riduciamo il bottone */
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .nav-left {
+    width: auto; /* Non fissa il 60% */
+  }
+
+  .nav-links {
+    display: none; /* Nascondiamo il menu */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostriamo il menu al click */
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .nav-button {
+    display: none; /* Nascondiamo il bottone su mobile */
+  }
+
+  /* Hamburger menu */
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* HERO */
+
+.hero {
+  display: flex;
+  min-height: 768px; /* Mantiene sempre una buona altezza */
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/hero.jpg');
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.hero-upper{
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px
+}
+
+.hero-lower{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.h-lower-superiore{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timer{
+  display: flex;
+  font-size: 36px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.iscrizioni{
+  display: flex;
+  font-size: 28px;
+  font-family: 'Libre Franklin', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.hero-button {
+  display: flex;
+  background-color: #755803;
+  color: white;
+  max-width: 209px;
+  min-height: 52px;
+  font-size: 14px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0; /* IL BOTTONE NON DEVE RESTRINGERSI */
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    padding: 0 20px;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hero-upper {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-lower {
+    width: 100%;
+    align-items: center;
+  }
+
+  .h-lower-superiore {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 20px; /* spazio interno per respirare */
+    min-height: auto; /* rimuove altezza fissa se troppo piccola */
+  }
+
+  .hero-container {
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-upper {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .H1 {
+    font-size: 36px; /* ridotto per evitare overflow */
+  }
+
+  .hero-lower {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .h-lower-superiore {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timer,
+  .iscrizioni {
+    font-size: 20px;
+  }
+
+  .hero-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* CHI SONO */
+.chi-sono{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color:white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chi-sono-container{
+  max-width: 1240px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.chi-sono-img{
+  width:45%;
+  height: 100%;
+  display: flex;
+  background-image: url('Images/hero.jpg'); /* da cambiare */
+  background-size: cover;
+  background-position: center;
+}
+
+.chi-sono-sep{
+  display: flex;   
+  width: 2px;
+  height: 90%;
+  background-color: black;
+}
+
+.chi-sono-testo{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+}
+
+.cs-testo-upper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cs-testo-lower{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+  /* CHI SONO BUTTON */
+.cs-button {
+  background-color: #14213D;
+  color: white;
+  max-width: 209px;
+  min-height: 52px;
+  font-size: 14px;
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0; /* IL BOTTONE NON DEVE RESTRINGERSI */
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .chi-sono-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .chi-sono-img {
+    width: 100%;
+    height: 300px; /* o usa aspect-ratio per auto adattamento */
+  }
+
+  .chi-sono-sep {
+    display: none; /* sparisce su mobile */
+  }
+
+  .chi-sono-testo {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .chi-sono-container {
+    padding: 30px 16px;
+    gap: 30px;
+  }
+
+  .chi-sono-img {
+    height: 250px;
+  }
+
+  .chi-sono-testo {
+    gap: 40px;
+  }
+
+  .cs-testo-upper,
+  .cs-testo-lower {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cs-button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* PERCORSO */
+
+/* === Layout === */
+.structured-path {
+background-color: white;
+font-family: 'Libre Franklin', sans-serif;
+padding-bottom: 100px;
+}
+
+.sc-container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.sc-section-title {
+text-align: center;
+font-size: 46px;
+font-weight: 700;
+text-transform: uppercase;
+margin-bottom: 60px;
+padding-top: 100px;
+line-height: 1.4;
+}
+
+/* === Grid === */
+.card-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 32px;
+}
+
+/* === Card === */
+.info-card {
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 24px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+transition: transform 0.3s ease;
+min-height: 54vh;
+}
+
+.info-card:hover {
+transform: translateY(-5px);
+}
+
+.card-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 16px;
+}
+
+.card-title {
+font-size: 18px;
+font-weight: bold;
+color: #000;
+}
+
+.card-icon {
+font-size: 1.5rem;
+}
+
+/* === Content === */
+.card-description {
+font-size: 0.95rem;
+color: #444;
+line-height: 1.5;
+margin-bottom: 16px;
+}
+
+.card-benefits {
+list-style: none;
+padding-left: 0;
+margin-bottom: 24px;
+}
+
+.card-benefits li {
+margin-bottom: 8px;
+font-size: 0.95rem;
+color: #222;
+}
+
+/* === CTA Button === */
+.card-button {
+text-align: center;
+padding: 12px 20px;
+font-weight: bold;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+display: inline-block;
+}
+
+.card-button--blue {
+background-color: #0f2c64;
+color: #fff;
+}
+
+.card-button--blue:hover {
+background-color: #0b214a;
+}
+
+.card-button--gold {
+background-color: #a1823d;
+color: #fff;
+}
+
+.card-button--gold:hover {
+background-color: #7a612c;
+}
+
+.card-button--teal {
+background-color: #1f4f5f;
+color: #fff;
+}
+
+.card-button--teal:hover {
+background-color: #163943;
+}
+
+/* === Placeholder per immagine (grigio) === */
+.card-image-placeholder {
+height: 80px;
+background-color: #ccc;
+margin-bottom: 20px;
+border-radius: 5px;
+}

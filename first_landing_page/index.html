@@ -1,178 +1,144 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>My Website</title>
+    <link rel="stylesheet" href="nuovo.css">
 </head>
-
 <body>
-    <header>
-        <!--Navbar-->
+
+    <!--NAVIGATION-->
+    
+    <nav class="navigation">
         <div class="nav-container">
-            <!--container 1140px-->
-            <div class="navbar-left">
-                <!--Logo + links-->
-                <img src="img/logo.png" alt="Logo"> <!--Need to change src-->
-                <ul>
-                    <li><a href="#">Chi sono</a></li>
-                    <li><a href="#">Percorso strutturato</a></li>
-                    <li><a href="#">Recensioni</a></li>
-                    <li><a href="#">Come funziona</a></li>
-                </ul>
+          
+          <!-- Parte Sinistra -->
+          <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="nav-logo">
+            <div class="nav-links">
+              <a href="#" class="nav-link">Home</a>
+              <a href="#" class="nav-link">Servizi</a>
+              <a href="#" class="nav-link">Chi siamo</a>
+              <a href="#" class="nav-link">Contatti</a>
             </div>
-            <div class="navbar-right">  
-                <!--Button-->
-                <button>Prenotami</button>
-            </div>
+          </div>
+      
+          <!-- Icona hamburger -->
+          <div class="menu-toggle">☰</div>
+      
+          <!-- Parte Destra -->
+          <div class="nav-button">
+            <button>Prenota ora</button>
+          </div>
+      
         </div>
-    </header>
+      </nav>      
+
+    <!--HERO SECTION-->
 
     <div class="hero">
-        <!--Container of all hero section-->
         <div class="hero-container">
-            <!--1140 px vertical-->
             <div class="hero-upper">
-                <!--Heading and par-->
-                <h2>
-                    Impara a fare trading seguito al 100%
-                    <!--Impara a fare trading seguito al 100%-->
-                </h2>
-                <p>
-                    Consulenze personalizzate 1:1
-                    <!--Consulenze personalizzate 1:1-->
-                </p>
+                <h1 class="H1 white">Impara a fare trading seguito al 100%</h1>
+                <p class="testo white">Consulenze 1:1 e corso formativo della durata di 3 mesi per divntare un vero professionista</p>
             </div>
+
             <div class="hero-lower">
-                <!--Timer, button and H2-->
-                <div>
-                    <p>
-                        Timer qui<!--Timer-->
-                    </p>
-                    <button>
-                        <!--Button-->
-                        Contattami ora
-                    </button>
-                    <!--Timer and buttton-->
+                <div class="h-lower-superiore">
+                    <p class="timer white">Timer</p>
+                    <p class="iscrizioni white">Al termine delle iscrizioni</p>
                 </div>
-                <div>
-                    <h2>
-                        Al termine delle iscrizioni
-                        <!--H2-->
-                    </h2>
-                </div>
+                <button class="hero-button">contattami ora</button>          
             </div>
         </div>
     </div>
+
+    <!--CHI SONO-->
 
     <div class="chi-sono">
-        <!--Sezione "chi sono"-->
         <div class="chi-sono-container">
-            <!--1140 px horizontal-->
-
-            <div class="chi-sono-image">
-                <!--Image-->
-                <img src="img/chi-sono.jpg" alt="Chi sono"> <!--Need to change src-->
+            <div class="chi-sono-img">
             </div>
-
-            <div class="chi-sono-separatore">
-                <!--Line and dots-->
-                <div>
-                    <!--Line-->
-                    <img src="dot/line.png" alt="Line"> <!--Need to change src-->
-                    <img src="dot/line.png" alt="Line"> <!--Need to change src-->
-                </div> 
-            </div>
-
-            <div class="chi-sono-text">
-                <!--Headings, par and button-->
-                <div class="chi-sono-upper">
-                    <h2>
-                        Chi sono
-                        <!--Chi sono-->
-                    </h2> <!--First heading and par-->
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aperiam consequatur maxime cum veritatis dolore? Doloribus nulla in quasi quam, magni est voluptatum corporis asperiores dolores esse, itaque, minus debitis.
-                        <!--Paragrafo-->
-                    </p>
+            <div class="chi-sono-sep">
+            </div> 
+            <div class="chi-sono-testo">
+                <div class="cs-testo-upper">
+                    <h2 class="H2 black">Chi sono</h2>
+                    <p class="testo black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde voluptatem eligendi. Debitis et doloribus tenetur modi, possimus facilis, corrupti ea dolor delectus, neque inventore? Error commodi adipisci vitae id. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quasi tempore eligendi, a suscipit beatae aliquid quod exercitationem. Odio necessitatibus, cumque non adipisci ipsum ipsam eligendi a vel id sapiente?</p>
                 </div>
-
-                <div class="chi-sono-lower">
-                    <h2>
-                        <!--Perche lo faccio-->
-                        Perche lo faccio
-                    </h2> <!--Second heading and par-->
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus provident expedita, veniam deleniti sequi unde doloribus at voluptate est cum eaque iusto veritatis laborum sapiente ipsam itaque dignissimos! Dolore, necessitatibus.
-                        <!--Paragrafo-->
-                    </p>
-                    <button>
-                        <!--Button-->
-                        Contattami qui
-                    </button>
-                </div>
+                <div class="cs-testo-lower">
+                    <h2 class="H2 black">perche lo faccio</h2>
+                    <p class="testo black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde voluptatem eligendi. Debitis et doloribus tenetur modi, possimus facilis, corrupti ea dolor delectus, neque inventore? Error commodi adipisci vitae id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloremque, tempora sint obcaecati dolore alias, maxime nisi ab similique modi in temporibus. Sint quae facere impedit voluptas ex perspiciatis iure.</p>
+                    <button class="cs-button">Scopri di più</button>
+                </div>  
             </div>
         </div>
     </div>
+    
+    <!--PERCORSO-->
 
-    <div class="percorso-strutturato">
-        <!--percorso strutturato-->
-        <div class="percorso-strutturato-container">
-            <!--1140 px verticale-->
-            <div class="percorso-strutturato-columns">
-                <!--blocco con allineamento orizzontale-->
-
-                <div class="percorso-strutturato-column1">
-                    <!--Colonna 1-->
-                    <div>
-                        <div>
-                            <!--Formazione 1:1 + immagine-->
-                            <h3>
-                                Formazione 1:1
-                            </h3>
-                            <img src="img/formazione.jpg" alt="Formazione"> <!--Need to change src-->
-                        </div>
-                        <hr> <!---Separatore-->
-                        <p>
-                            <!--Paragrafo-->
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit
-                        </p>
+    <section class="structured-path">
+        <div class="sc-container">
+        <h2 class="sc-section-title">Il percorso strutturato<br><span>che comprende</span></h2>
+            <div class="card-grid">
+            
+            <!-- Card 1: Formazione 1:1 -->
+                <div class="info-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Formazione 1:1</h3>
+                        <span class="card-icon">👥</span> <!-- usa un'icona custom o SVG -->
                     </div>
-                    <ul>
-                        <li>
-                            check1
-                        </li>
-                        <li>
-                            check2
-                        </li>
-                        <li>
-                            check3
-                        </li>
-                    </ul>
-                    <button>
-                        <!--Button-->
-                        Scopri di più
-                    </button>
+                    <p class="card-description">
+                    Sed et mauris vel sem posuere lacinia. Sed bibendum commodo nunc et tincidunt. 
+                    Morbi non volutpat nulla. Integer eget maximus est, ac imperdiet nibh.
+                    </p>
+                        <ul class="card-benefits">
+                            <li>✔ Vivamus sollicitudin sollicitudin lacus</li>
+                            <li>✔ Vivamus sollicitudin sollicitudin lacus</li>
+                            <li>✔ Vivamus sollicitudin sollicitudin lacus</li>
+                        </ul>
+                    <a href="#" class="card-button card-button--blue">Scopri di più</a>
                 </div>
-
-                <div class="percorso-strutturato-column2">
-                    <!--Colonna 2-->
+        
+                <!-- Card 2: Community Dedicata -->
+                <div class="info-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Community dedicata</h3>
+                        <span class="card-icon">💬</span>
+                    </div>
+                    <p class="card-description">
+                    Sed et mauris vel sem posuere lacinia. Sed bibendum commodo nunc et tincidunt. 
+                    Morbi non volutpat nulla. Integer eget maximus est, ac imperdiet nibh.
+                    </p>
+                        <div class="card-image-placeholder"></div>
+                        <a href="#" class="card-button card-button--gold">Scopri di più</a>
                 </div>
-
-                <div class="percorso-strutturato-column3">
-                    <!--Colonna 3-->
+        
+                <!-- Card 3: Live Settimanali + Materiale Formativo -->
+                <div class="info-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Live settimanali<br>Materiale formativo</h3>
+                        <span class="card-icon">📡</span>
+                    </div>
+                    <p class="card-description">
+                    Sed et mauris vel sem posuere lacinia. Sed bibendum commodo nunc et tincidunt. 
+                    Morbi non volutpat nulla. Integer eget maximus est, ac imperdiet nibh.
+                    </p>
+                        <div class="card-image-placeholder"></div>
+                    <a href="#" class="card-button card-button--teal">Scopri di più</a>
                 </div>
+      
             </div>
         </div>
-    </div>
-
+    </section>      
     <div class="recensioni">
-        <!--Sezione Recensioni (come la faccio boh non lo so)-->
     </div>
 
-    <div class="come-funziona">
-        <!--Sezione come funziona (come la faccio boh non lo so)-->
+    <div class="comefunziona">
     </div>
 
+    <div class="footer">
+    </div>
 </body>
 </html>
